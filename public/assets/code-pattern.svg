@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <title>HTML source code background</title>
+  <desc>A single editor-style image of the profile page HTML, with syntax highlighting.</desc>
+  <rect width="1920" height="1080" fill="#070e1b"/>
+  <g font-family="Cascadia Code, Consolas, Courier New, monospace" font-size="20" xml:space="preserve" fill="#d4deec">
+    <text x="16" y="28.00"><tspan fill="#b9defa">&lt;!doctype</tspan> html<tspan fill="#c7d6e7">&gt;</tspan></text>
+    <text x="16" y="57.00"><tspan fill="#b9defa">&lt;html</tspan> <tspan fill="#9cc8f3">lang</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;en&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <text x="16" y="86.00"><tspan fill="#b9defa">&lt;head</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 94.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="115.00">  <tspan fill="#b9defa">&lt;meta</tspan> <tspan fill="#9cc8f3">charset</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;utf-8&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 123.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="144.00">  <tspan fill="#b9defa">&lt;meta</tspan> <tspan fill="#9cc8f3">name</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;viewport&quot;</tspan> <tspan fill="#9cc8f3">content</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;width=device-width, initial-scale=1&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 152.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="173.00">  <tspan fill="#b9defa">&lt;meta</tspan> <tspan fill="#9cc8f3">name</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;theme-color&quot;</tspan> <tspan fill="#9cc8f3">content</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;#040911&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 181.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="202.00">  <tspan fill="#b9defa">&lt;meta</tspan> <tspan fill="#9cc8f3">name</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;description&quot;</tspan> <tspan fill="#9cc8f3">content</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Two souls, under the same sky. A little corner of the internet.&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 210.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="231.00">  <tspan fill="#b9defa">&lt;title</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#decda7">{{ config.title }}</tspan><tspan fill="#b9defa">&lt;/title</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 239.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="260.00">  <tspan fill="#b9defa">&lt;link</tspan> <tspan fill="#9cc8f3">rel</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;icon&quot;</tspan> <tspan fill="#9cc8f3">href</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;/assets/flower.svg&quot;</tspan> <tspan fill="#9cc8f3">type</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;image/svg+xml&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 268.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="289.00">  <tspan fill="#b9defa">&lt;link</tspan> <tspan fill="#9cc8f3">rel</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;preload&quot;</tspan> <tspan fill="#9cc8f3">as</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;image&quot;</tspan> <tspan fill="#9cc8f3">href</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;/assets/code-pattern.svg&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 297.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="318.00">  <tspan fill="#b9defa">&lt;link</tspan> <tspan fill="#9cc8f3">rel</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;stylesheet&quot;</tspan> <tspan fill="#9cc8f3">href</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;/style.css&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 326.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="347.00">  <tspan fill="#b9defa">&lt;script</tspan> <tspan fill="#9cc8f3">id</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;site-config&quot;</tspan> <tspan fill="#9cc8f3">type</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;application/json&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#decda7">{{ config | tojson }}</tspan><tspan fill="#b9defa">&lt;/script</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 355.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="376.00">  <tspan fill="#b9defa">&lt;script</tspan> <tspan fill="#9cc8f3">src</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;/script.js&quot;</tspan> defer<tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/script</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <text x="16" y="405.00"><tspan fill="#b9defa">&lt;/head</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <text x="16" y="434.00"><tspan fill="#b9defa">&lt;body</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 442.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="463.00">  <tspan fill="#b9defa">&lt;div</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;landscape&quot;</tspan> <tspan fill="#9cc8f3">aria-hidden</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;true&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/div</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 471.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="492.00">  <tspan fill="#b9defa">&lt;div</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;shade&quot;</tspan> <tspan fill="#9cc8f3">aria-hidden</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;true&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/div</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 500.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="521.00">  <tspan fill="#b9defa">&lt;div</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;letter-rain&quot;</tspan> <tspan fill="#9cc8f3">aria-hidden</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;true&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/div</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <text x="16" y="550.00"></text>
+    <path d="M16 558.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="579.00">  <tspan fill="#b9defa">&lt;button</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;entry&quot;</tspan> <tspan fill="#9cc8f3">id</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;entry&quot;</tspan> <tspan fill="#9cc8f3">aria-label</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Enter the profile website&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 587.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 587.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="608.00">    <tspan fill="#b9defa">&lt;span</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;entry-copy&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan>click to enter<tspan fill="#b9defa">&lt;span</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;entry-dots&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan>...<tspan fill="#b9defa">&lt;/span</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/span</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 616.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="637.00">  <tspan fill="#b9defa">&lt;/button</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <text x="16" y="666.00"></text>
+    <path d="M16 674.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="695.00">  <tspan fill="#b9defa">&lt;div</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;site&quot;</tspan> <tspan fill="#9cc8f3">id</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;site&quot;</tspan> inert <tspan fill="#9cc8f3">aria-hidden</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;true&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 703.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 703.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="724.00">    <tspan fill="#b9defa">&lt;header</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;topbar&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 732.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 732.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 732.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="753.00">      <tspan fill="#b9defa">&lt;div</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;sound-control&quot;</tspan> <tspan fill="#9cc8f3">role</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;group&quot;</tspan> <tspan fill="#9cc8f3">aria-label</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Audio controls&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 761.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 761.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 761.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M88 761.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="782.00">        <tspan fill="#b9defa">&lt;button</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;sound-button&quot;</tspan> <tspan fill="#9cc8f3">id</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;sound&quot;</tspan> <tspan fill="#9cc8f3">aria-label</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Turn sound on&quot;</tspan> <tspan fill="#9cc8f3">aria-pressed</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;false&quot;</tspan> <tspan fill="#9cc8f3">title</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Turn sound on&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/button</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 790.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 790.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 790.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M88 790.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="811.00">        <tspan fill="#b9defa">&lt;div</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;volume-wrap&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 819.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 819.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 819.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M88 819.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M112 819.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="840.00">          <tspan fill="#b9defa">&lt;input</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;volume-slider&quot;</tspan> <tspan fill="#9cc8f3">id</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;volume&quot;</tspan> <tspan fill="#9cc8f3">type</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;range&quot;</tspan> <tspan fill="#9cc8f3">min</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;0&quot;</tspan> <tspan fill="#9cc8f3">max</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;100&quot;</tspan> <tspan fill="#9cc8f3">step</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;1&quot;</tspan> <tspan fill="#9cc8f3">value</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;50&quot;</tspan> <tspan fill="#9cc8f3">aria-label</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Volume&quot;</tspan> <tspan fill="#9cc8f3">aria-valuetext</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;50%&quot;</tspan> <tspan fill="#9cc8f3">title</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;Volume 50%&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 848.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 848.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 848.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M88 848.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M112 848.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="869.00">          <tspan fill="#b9defa">&lt;output</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;volume-value&quot;</tspan> <tspan fill="#9cc8f3">id</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;volume-value&quot;</tspan> <tspan fill="#9cc8f3">for</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;volume&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan>50%<tspan fill="#b9defa">&lt;/output</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 877.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 877.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 877.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M88 877.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="898.00">        <tspan fill="#b9defa">&lt;/div</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 906.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 906.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 906.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="927.00">      <tspan fill="#b9defa">&lt;/div</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 935.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 935.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M64 935.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="956.00">      <tspan fill="#b9defa">&lt;span</tspan> <tspan fill="#9cc8f3">class</tspan><tspan fill="#c7d6e7">=</tspan><tspan fill="#b8b5ff">&quot;corner-note&quot;</tspan><tspan fill="#c7d6e7">&gt;</tspan>Developer<tspan fill="#b9defa">&lt;span</tspan><tspan fill="#c7d6e7">&gt;</tspan>✧<tspan fill="#b9defa">&lt;/span</tspan><tspan fill="#c7d6e7">&gt;</tspan><tspan fill="#b9defa">&lt;/span</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+    <path d="M16 964.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <path d="M40 964.00v29.00" stroke="#6683a324" stroke-width="1"/>
+    <text x="16" y="985.00">    <tspan fill="#b9defa">&lt;/header</tspan><tspan fill="#c7d6e7">&gt;</tspan></text>
+  </g>
+</svg>
