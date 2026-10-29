@@ -1,0 +1,69 @@
+.music-widget { --player-accent: #8c65ff; position: fixed; right: 26px; bottom: 26px; width: 64px; height: 64px; z-index: 6; }
+.music-launcher { position: relative; display: grid; place-items: center; width: 64px; height: 64px; padding: 3px; border: 0; border-radius: 50%; color: #fff; background: conic-gradient(from 35deg, #55dbed, #626cff, #9e65ff, #55dbed); box-shadow: 0 0 22px #7772ff40, 0 6px 24px #0008; cursor: pointer; transition: transform .3s, opacity .2s, visibility .3s, box-shadow .3s; }
+.music-launcher:hover { transform: scale(1.07); box-shadow: 0 0 28px #7772ff70, 0 6px 24px #0008; }
+.vinyl { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; border-radius: 50%; background: #142338; animation: vinyl-spin 12s linear infinite; animation-play-state: paused; }
+.vinyl::after { content: ''; position: absolute; width: 12%; height: 12%; left: 44%; top: 44%; border: 2px solid #d6e6ff75; border-radius: 50%; background: #07101b; box-shadow: 0 0 0 3px #050b1680, 0 0 0 14px #ffffff08; }
+.player-cover { display: block; width: 100%; height: 100%; object-fit: cover; }
+.is-playing .vinyl { animation-play-state: running; }
+.launcher-play { position: absolute; right: -2px; bottom: -1px; width: 20px; height: 20px; display: grid; place-items: center; border: 1px solid #a9c8ff80; border-radius: 50%; background: #192b48; box-shadow: 0 1px 8px #0008; }
+.launcher-play svg { width: 12px; height: 12px; }
+.music-panel { position: absolute; right: 0; bottom: 0; display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 14px; width: 390px; max-width: calc(100vw - 40px); min-height: 210px; padding: 17px 18px 13px 14px; border: 1px solid #c9d8ee30; border-radius: 24px; color: #f4f7ff; background: linear-gradient(130deg, #10131aef, #090d15f5); box-shadow: 0 18px 60px #0009, inset 0 1px 0 #ffffff0b; backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(10px) scale(.92); transform-origin: bottom right; transition: transform .32s cubic-bezier(.22,1,.36,1), opacity .22s, visibility .32s; }
+.music-widget.is-expanded .music-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1); }
+.music-widget.is-expanded .music-launcher { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(.7); }
+.player-close { position: absolute; right: -8px; top: -10px; z-index: 1; display: grid; place-items: center; width: 32px; height: 32px; padding: 7px; border: 1px solid #b19affaa; border-radius: 50%; background: #643cdb; color: #fff; box-shadow: 0 0 17px #845bff50; cursor: pointer; }
+.player-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.player-disc { align-self: center; position: relative; width: 108px; height: 108px; margin-left: -22px; margin-top: -12px; border: 1px solid #d1e2ff26; border-radius: 50%; box-shadow: 0 5px 30px #0007; }
+.player-body { min-width: 0; }
+.player-status { display: inline-flex; align-items: center; gap: 6px; padding: 3px 7px; border: 1px solid #ffffff13; border-radius: 999px; background: #ffffff06; font-size: 8px; font-weight: 600; color: #d5dfed; }
+.status-bars { height: 8px; display: flex; align-items: center; gap: 2px; color: #6be3df; }
+.status-bars i { width: 2px; height: 3px; border-radius: 2px; background: currentColor; }
+.status-bars i:nth-child(2) { height: 7px; }
+.status-bars i:nth-child(3) { height: 5px; }
+.is-playing .status-bars i { animation: player-bars .8s ease-in-out infinite alternate; }
+.is-playing .status-bars i:nth-child(2) { animation-delay: -.3s; }
+.is-playing .status-bars i:nth-child(3) { animation-delay: -.5s; }
+.music-widget.has-error .status-bars { color: #ef9da4; }
+.player-title { margin: 8px 0 3px; padding-right: 10px; font-size: 15px; font-weight: 700; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player-artist { margin: 0; font-size: 10px; color: #a1a9ba; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player-timeline { margin-top: 7px; }
+.waveform { --progress: 0%; position: relative; height: 22px; }
+.waveform svg { display: block; width: 100%; height: 22px; overflow: visible; }
+.waveform path { fill: none; stroke-width: 2.2; stroke-linecap: round; }
+.wave-track { stroke: #ffffff17; }
+.wave-progress { stroke: url(#wave-color); clip-path: inset(0 calc(100% - var(--progress)) 0 0); }
+.wave-dot { position: absolute; width: 6px; height: 6px; top: 8px; left: clamp(3px, var(--progress), calc(100% - 3px)); transform: translateX(-50%); border-radius: 50%; background: #b19cff; box-shadow: 0 0 7px #a58dff9c; pointer-events: none; }
+#music-seek { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+#music-seek:disabled { cursor: default; }
+.waveform:has(#music-seek:focus-visible) { outline: 1px solid #a0caff; outline-offset: 3px; border-radius: 5px; }
+.player-times { display: flex; justify-content: space-between; color: #9098a9; font: 9px/1.2 'DM Sans',sans-serif; font-variant-numeric: tabular-nums; }
+.player-controls { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 9px; }
+.transport-button { display: grid; place-items: center; flex-shrink: 0; width: 30px; height: 30px; padding: 7px; color: #bbc3d2; background: #ffffff05; border: 1px solid #ffffff1c; border-radius: 50%; cursor: pointer; transition: background .2s, color .2s; }
+.transport-button svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.transport-button:hover { color: #fff; background: #ffffff12; }
+.transport-button[aria-pressed='true'] { color: #b9a4ff; border-color: #a088ff50; }
+.transport-button:disabled { opacity: .28; cursor: default; }
+.player-play { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; padding: 9px; color: #fff; background: linear-gradient(145deg,#9b5bff,#6c37e4); border: 1px solid #d3c1ff; border-radius: 50%; outline: 1px solid #9f82ff50; outline-offset: 3px; box-shadow: 0 0 18px #8552ff35; cursor: pointer; }
+.player-play svg { width: 23px; height: 23px; }
+.player-play:hover { background: #9b60ff; }
+.player-volume-row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+.player-volume-row .sound-button { width: 22px; height: 22px; padding: 2px; color: #a6b3c9; }
+.player-volume-row .sound-button svg { width: 15px; height: 15px; }
+.player-volume-row .volume-slider { flex: 1; min-width: 0; width: auto; height: 20px; }
+.player-volume-row .volume-slider::-webkit-slider-runnable-track { height: 3px; }
+.player-volume-row .volume-slider::-webkit-slider-thumb { width: 8px; height: 8px; margin-top: -2.5px; }
+.player-volume-row .volume-slider::-moz-range-track, .player-volume-row .volume-slider::-moz-range-progress { height: 3px; }
+.player-volume-row .volume-slider::-moz-range-thumb { width: 8px; height: 8px; }
+.player-volume-value { min-width: 26px; font-size: 9px; font-variant-numeric: tabular-nums; color: #94a1b7; text-align: right; }
+@keyframes vinyl-spin { to { transform: rotate(360deg); } }
+@keyframes player-bars { to { transform: scaleY(.4); } }
+.provider-player { grid-column: 1 / -1; min-width: 0; }
+.provider-player iframe { display: block; width: 100%; border: 0; border-radius: 12px; }
+.provider-note { grid-column: 1 / -1; margin: 0; color: #a9b5c9; font-size: 10px; line-height: 1.7; }
+.provider-note a { display: inline-block; color: #bca9ff; margin-left: 5px; }
+.music-widget[data-provider='spotify'] .player-timeline, .music-widget[data-provider='spotify'] .player-controls, .music-widget[data-provider='spotify'] .player-volume-row { display: none; }
+.music-widget.is-external .music-panel { max-height: calc(100dvh - 65px); overflow-y: auto; scrollbar-width: thin; }
+.music-widget.is-external .player-close { right: 10px; top: 10px; }
+.music-widget.is-external .player-disc { margin-left: 0; width: 92px; height: 92px; }
+.music-widget[data-provider='spotify'] .music-panel { min-height: 0; }
+.provider-player[hidden], .provider-note[hidden] { display: none; }
+@media (max-width: 620px) { .music-widget { right: 20px; bottom: 20px; } .music-panel { grid-template-columns: 78px minmax(0,1fr); gap: 10px; padding-left: 12px; padding-right: 14px; } .player-disc { width: 92px; height: 92px; margin-left: -17px; } .player-controls { gap: 5px; } .transport-button { width: 27px; height: 27px; padding: 6px; } .player-play { width: 36px; height: 36px; padding: 7px; } }
