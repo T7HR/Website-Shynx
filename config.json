@@ -2,6 +2,9 @@
   "title": "Shynx Team",
   "subtitle": "You can contact us via the channels below.",
   "music_url": "/assets/music.mp3",
+  "music_title": "The Weeknd, JENNIE & Lily Rose Depp - One Of The Girls",
+  "music_artist": "The Weeknd, JENNIE, Lily-Rose Depp",
+  "music_cover": "/assets/music.png",
   "discord_server_url": "https://discord.gg/hcx7gYvczG",
   "profiles": [
     {
@@ -9,7 +12,7 @@
       "display_name": "",
       "fallback_name": "Profile 01",
       "quote": "and if you're ever feeling lonely, just look at the moon. someone somewhere is looking at it too.",
-      "links": { "instagram": "", "tiktok": "https://www.tiktok.com/@haru.ft?_r=1&_t=ZS-9Ak2lO871Oh", "youtube": "https://www.youtube.com/@T7HR" }
+      "links": { "instagram": "https://www.instagram.com/theerapat.haru?obrf=MWZqM2ltaWllN2ZlMg%3D%3D&utm_source=qr", "tiktok": "https://www.tiktok.com/@haru.ft?_r=1&_t=ZS-9Ak2lO871Oh", "youtube": "https://www.youtube.com/@T7HR" }
     },
     {
       "id": "348498296836456450",
