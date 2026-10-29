@@ -31,80 +31,6 @@ syncTabTitle();
 motionPreference.addEventListener('change', syncTabTitle);
 document.addEventListener('visibilitychange', syncTabTitle);
 
-const soundButton = document.getElementById('sound');
-const volumeSlider = document.getElementById('volume');
-const volumeValue = document.getElementById('volume-value');
-const volumeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4V4Z"/>';
-let soundEnabled = false;
-let volume = 50;
-let lastNonZeroVolume = 50;
-let soundRevision = 0;
-let audioContext;
-let masterGain;
-let ambienceStarted = false;
-let music;
-
-function paintSound() {
-  soundButton.innerHTML = volumeIcon + (soundEnabled ? (volume <= 50 ? '<path d="M15 8a6 6 0 0 1 0 8"/>' : '<path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>') : '<path d="m16 9 5 6m0-6-5 6"/>') + '</svg>';
-  const label = soundEnabled ? 'Turn sound off' : 'Turn sound on';
-  soundButton.setAttribute('aria-label', label);
-  soundButton.setAttribute('aria-pressed', String(soundEnabled));
-  soundButton.title = label;
-  volumeSlider.value = volume;
-  volumeSlider.style.setProperty('--volume', `${volume}%`);
-  volumeSlider.setAttribute('aria-valuetext', `${volume}%${soundEnabled ? '' : ' (muted)'}`);
-  volumeSlider.title = `Volume ${volume}%`;
-  volumeValue.value = `${volume}%`;
-  document.getElementById('sound-caption').textContent = soundEnabled ? `volume ${volume}%` : 'sound off';
-}
-
-async function setSound(enabled) {
-  const revision = ++soundRevision;
-  enabled = enabled && volume > 0;
-  try {
-    if (config.music_url) {
-      if (!music) { music = new Audio(config.music_url); music.loop = true; }
-      music.volume = volume / 100;
-      if (enabled) await music.play(); else music.pause();
-    } else {
-      if (enabled) {
-        audioContext ??= new (window.AudioContext || window.webkitAudioContext)();
-        await audioContext.resume();
-        if (revision !== soundRevision) return;
-        if (!ambienceStarted) {
-          masterGain = audioContext.createGain();
-          masterGain.gain.value = 0;
-          masterGain.connect(audioContext.destination);
-          // Quiet, original ambient chord. A personal audio file can replace it in config.json.
-          [130.81, 196, 261.63, 329.63, 392].forEach((frequency, index) => {
-            const oscillator = audioContext.createOscillator();
-            const gain = audioContext.createGain();
-            oscillator.type = 'sine'; oscillator.frequency.value = frequency;
-            oscillator.detune.value = index % 2 ? 3 : -3;
-            gain.gain.value = 0.18 / (index + 1);
-            oscillator.connect(gain); gain.connect(masterGain); oscillator.start();
-          });
-          ambienceStarted = true;
-        }
-      }
-      if (masterGain) {
-        const now = audioContext.currentTime;
-        masterGain.gain.cancelScheduledValues(now);
-        masterGain.gain.setTargetAtTime(enabled ? (volume / 100) * 0.32 : 0, now, .08);
-      }
-    }
-    if (revision !== soundRevision) return;
-    soundEnabled = enabled;
-  } catch {
-    if (revision !== soundRevision) return;
-    soundEnabled = false;
-    paintSound();
-    document.getElementById('sound-caption').textContent = 'audio unavailable';
-    return;
-  }
-  paintSound();
-}
-
 let entered = false;
 document.getElementById('entry').addEventListener('click', () => {
   if (entered) return;
@@ -114,20 +40,9 @@ document.getElementById('entry').addEventListener('click', () => {
   site.inert = false; site.removeAttribute('aria-hidden');
   document.getElementById('entry').setAttribute('aria-hidden', 'true');
   document.getElementById('entry').tabIndex = -1;
-  soundButton.focus({ preventScroll: true });
-  setSound(true);
+  document.getElementById('music-launcher').focus({ preventScroll: true });
+  document.dispatchEvent(new Event('site:entered'));
 });
-soundButton.addEventListener('click', () => {
-  if (!soundEnabled && volume === 0) volume = lastNonZeroVolume;
-  setSound(!soundEnabled);
-});
-volumeSlider.addEventListener('input', () => {
-  volume = Number(volumeSlider.value);
-  if (volume > 0) lastNonZeroVolume = volume;
-  paintSound();
-  setSound(volume > 0);
-});
-paintSound();
 
 if (!motionPreference.matches) {
   const letterRain = document.querySelector('.letter-rain');
